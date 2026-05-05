@@ -346,6 +346,8 @@ body::before {
 
 .hero-visual {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 居中logo - 放在音标图上方居中部位 */
@@ -1253,6 +1255,8 @@ section {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   
   .hero-desc {
@@ -1373,6 +1377,8 @@ section {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   
   .hero-badge {
