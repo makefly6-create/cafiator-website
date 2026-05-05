@@ -1325,6 +1325,35 @@ section {
     display: none;
   }
   
+  .navbar {
+    padding: 12px 16px;
+  }
+  
+  .navbar .container {
+    gap: 8px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .logo-icon {
+    font-size: 18px;
+  }
+  
+  .user-nav {
+    gap: 8px;
+  }
+  
+  .user-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .cart-icon {
+    padding: 6px;
+  }
+  
   .hero {
     padding: 80px 16px 40px;
     min-height: auto;
