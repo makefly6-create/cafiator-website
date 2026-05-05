@@ -392,12 +392,10 @@ body::before {
   );
 }
 
-/* 浮动数据卡片 */
+/* 浮动数据卡片 - 桌面端移到图片下方 */
 .hero-float-card {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
+  position: relative;
+  margin-top: 24px;
   padding: 20px 24px;
   background: rgba(11, 25, 41, 0.85);
   backdrop-filter: blur(20px);
