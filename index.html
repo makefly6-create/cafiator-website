@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>啡行咖 CAFIATOR | 航空与咖啡的完美融合</title>
+  <meta name="description" content="啡行咖CAFITOR，专注航空爱好者精品咖啡，每一杯都是云端的味道">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">✈</div>
+        <span class="logo-text">CAFI<span>ATOR</span></span>
+      </a>
+      <ul class="nav-links">
+        <a href="#home" class="active">首页</a>
+        <a href="#products">产品</a>
+        <a href="#story">品牌</a>
+        <a href="#points">积分</a>
+      </ul>
+      <!-- 用户登录/注册 -->
+      <div class="user-nav">
+        <a href="#" class="user-btn" id="loginBtn">登录</a>
+        <a href="#" class="user-btn register-btn" id="registerBtn">注册</a>
+      </div>
+      <!-- 购物车图标 -->
+      <div class="cart-icon" id="cartIcon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero区域 -->
+  <section class="hero" id="home">
+    <!-- 飞机尾迹背景 -->
+    <div class="plane-trail-bg"></div>
+    <!-- 咖啡豆波浪背景 -->
+    <div class="coffee-bg">
+      <canvas id="coffeeCanvas"></canvas>
+      <div class="fog-overlay"></div>
+    </div>
+    <!-- Logo渐变融入背景 -->
+    <div class="logo-gradient-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">为航空爱好者而生</div>
+        <h1>
+          <span class="line1">每一杯咖啡，</span>
+          <span class="line2">都是云端的味道</span>
+        </h1>
+        <p class="hero-desc">
+          源自精选产地，融合飞行灵感。专为航空爱好者打造的精品咖啡，让你在地面也能感受万米高空的醇香。
+        </p>
+        <div class="hero-buttons">
+          <a href="#products" class="gold-btn">探索产品 ✈</a>
+          <a href="#story" class="outline-btn">了解故事</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <!-- 音标图作为主图 -->
+          <img src="音标图.png" alt="啡行咖音标" class="hero-image">
+          <!-- 白色logo居中放在音标图上方 -->
+          <img src="啡行咖LOGO_transparent.png" alt="啡行咖CAFITOR" class="hero-logo-center">
+          <div class="hero-image-overlay"></div>
+          <div class="hero-float-card">
+            <div class="stat">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">阿拉比卡</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">12+</div>
+              <div class="stat-label">精选产地</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">∞</div>
+              <div class="stat-label">飞行热情</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 飞机尾迹动画区域 -->
+  <div class="plane-trail-section">
+    <canvas id="planeTrailCanvas"></canvas>
+  </div>
+
+  <!-- 产品展示 -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="gradient-text">云端精选</h2>
+        <p>每一款都是为航空爱好者精心调配，让味蕾感受飞行的自由</p>
+      </div>
+      <div class="products-grid">
+        <!-- 深烘系列 -->
+        <div class="product-card glass-card">
+          <img src="CAPTAIN MAGIC.png" alt="机长珍藏" class="product-image">
+          <div class="product-info">
+            <span class="product-tag roast-dark">深烘 · 经典</span>
+            <h3 class="product-name">机长珍藏 · 深度烘焙</h3>
+            <p class="product-desc">浓郁醇厚，带有焦糖和烟熏的余韵，如同驾驶舱内的深沉与从容</p>
+            <div class="product-footer">
+              <span class="product-price">¥128 <span>/ 227g</span></span>
+              <button class="add-cart-btn" aria-label="加入购物车">+</button>
+            </div>
+          </div>
+        </div>
+        <!-- 中烘系列 -->
+        <div class="product-card glass-card">
+          <img src="atc.png" alt="塔台特调" class="product-image">
+          <div class="product-info">
+            <span class="product-tag roast-medium">中烘 · 均衡</span>
+            <h3 class="product-name">塔台特调 · 中度烘焙</h3>
+            <p class="product-desc">均衡优雅，柑橘与坚果的完美平衡，灵感来自塔台指挥的精准与冷静</p>
+            <div class="product-footer">
+              <span class="product-price">¥118 <span>/ 227g</span></span>
+              <button class="add-cart-btn" aria-label="加入购物车">+</button>
+            </div>
+          </div>
+        </div>
+        <!-- 浅烘系列 -->
+        <div class="product-card glass-card">
+          <img src="巡航配方主图.jpg" alt="巡航配方" class="product-image">
+          <div class="product-info">
+            <span class="product-tag roast-light">浅烘 · 清新</span>
+            <h3 class="product-name">巡航配方 · 轻度烘焙</h3>
+            <p class="product-desc">清新果香，带有蓝莓和花香，如同在云端巡航的轻盈与自由</p>
+            <div class="product-footer">
+              <span class="product-price">¥138 <span>/ 227g</span></span>
+              <button class="add-cart-btn" aria-label="加入购物车">+</button>
+            </div>
+          </div>
+        </div>
+        <!-- 深烘 -->
+        <div class="product-card glass-card">
+          <img src="加油时刻主图.jpg" alt="加油时刻" class="product-image">
+          <div class="product-info">
+            <span class="product-tag roast-dark">深烘 · 浓郁</span>
+            <h3 class="product-name">加油时刻 · 浓缩拼配</h3>
+            <p class="product-desc">浓郁强烈，黑巧克力和香料的完美融合，为每一次顺利飞行加油</p>
+            <div class="product-footer">
+              <span class="product-price">¥148 <span>/ 227g</span></span>
+              <button class="add-cart-btn" aria-label="加入购物车">+</button>
+            </div>
+          </div>
+        </div>
+        <!-- 中烘 -->
+        <div class="product-card glass-card">
+          <img src="CABINCREW.png" alt="私人订制" class="product-image">
+          <div class="product-info">
+            <span class="product-tag roast-medium">中烘 · 醇香</span>
+            <h3 class="product-name">私人订制 · 飞行徽章套装</h3>
+            <p class="product-desc">专属订制礼盒，含4款精选咖啡豆+定制徽章，献给热爱飞行的你</p>
+            <div class="product-footer">
+              <span class="product-price">¥528 <span>/ 套装</span></span>
+              <button class="add-cart-btn" aria-label="加入购物车">+</button>
+            </div>
+          </div>
+        </div>
+        <!-- 浅烘 -->
+        <div class="product-card glass-card">
+          <img src="挂耳包.jpg" alt="初航体验" class="product-image">
+          <div class="product-info">
+            <span class="product-tag roast-light">浅烘 · 果香</span>
+            <h3 class="product-name">初航体验 · 尝鲜套装</h3>
+            <p class="product-desc">精选6款小包装，涵盖所有风味，踏上你的咖啡飞行之旅</p>
+            <div class="product-footer">
+              <span class="product-price">¥268 <span>/ 6x50g</span></span>
+              <button class="add-cart-btn" aria-label="加入购物车">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 积分计划 -->
+  <section class="points-section" id="points">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="gradient-text">飞行积分计划</h2>
+        <p>消费即可累积积分，积分可兑换精美礼品或抵扣现金</p>
+      </div>
+      <div class="points-grid">
+        <div class="point-card glass-card">
+          <div class="point-icon">💰</div>
+          <div class="point-value">1元</div>
+          <div class="point-label">消费累积</div>
+          <p class="point-desc">每消费1元，即可获得1积分，积分永不清零</p>
+        </div>
+        <div class="point-card glass-card">
+          <div class="point-icon">🚀</div>
+          <div class="point-value">10积分</div>
+          <div class="point-label">分享奖励</div>
+          <p class="point-desc">分享商品链接给好友，好友下单即可获得10积分</p>
+        </div>
+        <div class="point-card glass-card">
+          <div class="point-icon">🎁</div>
+          <div class="point-value">100积分</div>
+          <div class="point-label">抵扣1元</div>
+          <p class="point-desc">100积分可抵扣1元现金使用，积分当钱花</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌故事 -->
+  <section class="story" id="story">
+    <div class="container">
+      <div class="story-content">
+        <div class="story-image-wrapper">
+          <img src="个人收藏.jpg" alt="啡行咖品牌" class="story-image">
+          <div class="story-badge">
+            <span class="number">2021</span>
+            <span class="text">始于飞行</span>
+          </div>
+        </div>
+        <div class="story-text">
+          <h2 class="gradient-text">为航空爱好者<br>打造的精品咖啡</h2>
+          <p>
+            啡行咖 CAFIATOR 起源于一群飞行爱好者的梦想：让每一位热爱航空的人，都能感受到云端的醇香。我们相信，咖啡与飞行有着相同的追求——对完美的执着，对自由的向往。
+          </p>
+          <p>
+            我们走遍全球12个精品咖啡产地，只为找到那一颗能够诠释飞行梦想的咖啡豆。从非洲高原到中南美洲，从埃塞俄比亚到哥伦比亚，每一款产品都承载着我们对天空的敬意。
+          </p>
+          <div class="story-features">
+            <div class="story-feature">
+              <div class="icon">🌍</div>
+              <span class="text">全球精选产地</span>
+            </div>
+            <div class="story-feature">
+              <div class="icon">☕</div>
+              <span class="text">阿拉比卡豆</span>
+            </div>
+            <div class="story-feature">
+              <div class="icon">🎯</div>
+              <span class="text">精准烘焙</span>
+            </div>
+            <div class="story-feature">
+              <div class="icon">✈</div>
+              <span class="text">航空灵感</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">✈</div>
+            <span class="logo-text">CAFI<span>ATOR</span></span>
+          </a>
+          <p>专注为航空爱好者打造精品咖啡，让每一杯都成为云端的美好时光。</p>
+        </div>
+        <div class="footer-col">
+          <h4>产品</h4>
+          <ul>
+            <li><a href="#products">全部产品</a></li>
+            <li><a href="#products">限量珍藏</a></li>
+            <li><a href="#products">新手套装</a></li>
+            <li><a href="#products">礼品礼盒</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>支持</h4>
+          <ul>
+            <li><a href="#">配送说明</a></li>
+            <li><a href="#">支付方式</a></li>
+            <li><a href="#">退换政策</a></li>
+            <li><a href="#">联系客服</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>关于</h4>
+          <ul>
+            <li><a href="#story">品牌故事</a></li>
+            <li><a href="#points">积分计划</a></li>
+            <li><a href="#">隐私政策</a></li>
+            <li><a href="#">用户协议</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 啡行咖 CAFIATOR. 为航空爱好者而生</p>
+        <div class="social-links">
+          <a href="#" aria-label="微信">💬</a>
+          <a href="#" aria-label="微博">📱</a>
+          <a href="#" aria-label="小红书">📕</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 购物车侧边栏 -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>购物车</h3>
+      <button class="cart-close" id="cartClose">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">购物车是空的</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>合计</span>
+        <span class="total-price" id="totalPrice">¥0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">去结算</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
