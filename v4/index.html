@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAFIATOR | 啡行咖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="nav" class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="啡行咖LOGO_transparent.png" alt="CAFIATOR" class="nav-logo-img">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#products" class="nav-link" data-section="products">系列</a>
+      <a href="#story" class="nav-link" data-section="story">故事</a>
+      <a href="#craft" class="nav-link" data-section="craft">工艺</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-cart" id="cartIcon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav-cart-badge" id="cartCount">0</span>
+      </button>
+      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-overline">Est. 2021 · For Aviators</p>
+    <h1 class="hero-title">
+      <span>啡</span><span>行</span><span>咖</span>
+    </h1>
+    <p class="hero-subtitle">每一杯，都是云端的时光</p>
+    <p class="hero-tagline-en">Born for Aviators · Crafted with Passion</p>
+    <div class="hero-scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ STATEMENT ═══════ -->
+<section class="statement reveal">
+  <div class="statement-inner">
+    <p class="statement-text">
+      我们相信，一杯好咖啡和一次完美飞行<br>
+      有着相同的基因——
+      <em>对细节的极致追求，<br>对品质的毫不妥协，<br>以及对自由永远不灭的向往。</em>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════ PRODUCTS ═══════ -->
+<section id="products" class="products">
+  <div class="section-pad">
+    <div class="products-header reveal">
+      <span class="overline">The Collection</span>
+      <h2 class="section-heading">云端精选</h2>
+    </div>
+  </div>
+
+  <!-- Product 1: Featured -->
+  <div class="product-hero reveal" data-name="机长珍藏">
+    <div class="product-hero-img">
+      <img src="CAPTAIN_MAGIC.jpg" alt="机长珍藏">
+    </div>
+    <div class="product-hero-info">
+      <span class="overline">Signature Blend</span>
+      <h3 class="product-hero-name">机长珍藏</h3>
+      <p class="product-hero-en">CAPTAIN MAGIC</p>
+      <p class="product-hero-desc">深度烘焙，浓郁醇厚。焦糖与烟熏的余韵，如同驾驶舱内的深沉与从容。每一口都是对完美的致敬。</p>
+      <div class="product-hero-footer">
+        <span class="product-price">¥128</span>
+        <span class="product-weight">227g</span>
+        <button class="btn-add">加入购物袋</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2-3: Split -->
+  <div class="product-split">
+    <div class="product-half reveal" data-name="塔台特调">
+      <div class="product-half-img">
+        <img src="atc.png" alt="塔台特调">
+      </div>
+      <div class="product-half-info">
+        <span class="overline">Medium Roast</span>
+        <h4>塔台特调</h4>
+        <p>均衡优雅，柑橘与坚果的完美平衡</p>
+        <div class="product-half-footer">
+          <span class="product-price">¥118</span>
+          <button class="btn-add">加入购物袋</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-half reveal" data-name="巡航配方">
+      <div class="product-half-img">
+        <img src="巡航时刻.jpg" alt="巡航配方">
+      </div>
+      <div class="product-half-info">
+        <span class="overline">Light Roast</span>
+        <h4>巡航配方</h4>
+        <p>清新果香，蓝莓与花香的轻盈自由</p>
+        <div class="product-half-footer">
+          <span class="product-price">¥138</span>
+          <button class="btn-add">加入购物袋</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4: Featured -->
+  <div class="product-hero product-hero-reverse reveal" data-name="加油时刻">
+    <div class="product-hero-img">
+      <img src="加油时刻.png" alt="加油时刻">
+    </div>
+    <div class="product-hero-info">
+      <span class="overline">Bold Blend</span>
+      <h3 class="product-hero-name">加油时刻</h3>
+      <p class="product-hero-en">FUEL UP</p>
+      <p class="product-hero-desc">浓缩拼配，浓郁强烈。黑巧克力与香料的完美融合，为每一次顺利飞行加油助威。</p>
+      <div class="product-hero-footer">
+        <span class="product-price">¥148</span>
+        <span class="product-weight">227g</span>
+        <button class="btn-add">加入购物袋</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5-6: Split -->
+  <div class="product-split">
+    <div class="product-half reveal" data-name="私人订制">
+      <div class="product-half-img">
+        <img src="私人定制.png" alt="私人订制">
+      </div>
+      <div class="product-half-info">
+        <span class="overline">Gift Set</span>
+        <h4>私人订制</h4>
+        <p>4款精选+定制徽章礼盒套装</p>
+        <div class="product-half-footer">
+          <span class="product-price">¥528</span>
+          <button class="btn-add">加入购物袋</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-half reveal" data-name="初航体验">
+      <div class="product-half-img">
+        <img src="挂耳包.jpg" alt="初航体验">
+      </div>
+      <div class="product-half-info">
+        <span class="overline">Starter Kit</span>
+        <h4>初航体验</h4>
+        <p>6款小包装尝鲜，踏上咖啡飞行之旅</p>
+        <div class="product-half-footer">
+          <span class="product-price">¥268</span>
+          <button class="btn-add">加入购物袋</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ STORY ═══════ -->
+<section id="story" class="story">
+  <div class="story-img reveal">
+    <img src="个人收藏.jpg" alt="品牌故事">
+  </div>
+  <div class="story-content reveal">
+    <span class="overline">Our Origin</span>
+    <h2 class="section-heading">始于热爱</h2>
+    <div class="story-text">
+      <p>2021年，一群飞行爱好者聚在一起。他们飞过不同的航线，见过不同的天空，但每次降落后，最想念的还是那一杯好咖啡。</p>
+      <p>于是他们决定——用自己的方式，酿一杯属于云端的味道。从埃塞俄比亚的高原到哥伦比亚的山谷，从每一颗豆子的筛选到每一度烘焙曲线的调试，CAF IATOR的诞生，源于对飞行的热爱，也源于对咖啡的执着。</p>
+    </div>
+    <div class="story-numbers">
+      <div class="story-num">
+        <span class="num">12</span>
+        <span class="label">精品产地</span>
+      </div>
+      <div class="story-num">
+        <span class="num">100%</span>
+        <span class="label">阿拉比卡</span>
+      </div>
+      <div class="story-num">
+        <span class="num">72h</span>
+        <span class="label">新鲜送达</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CRAFT ═══════ -->
+<section id="craft" class="craft">
+  <div class="section-pad">
+    <div class="craft-header reveal">
+      <span class="overline">The Craft</span>
+      <h2 class="section-heading">精益求精</h2>
+      <p class="craft-desc">每一款CAF IATOR产品，都经过数百次杯测与调配。<br>我们用飞行员的严谨态度对待每一颗咖啡豆。</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-card reveal">
+        <div class="craft-card-num">01</div>
+        <h4>产地甄选</h4>
+        <p>覆盖非洲、中南美洲核心咖啡带，海拔1500m以上精品单品豆。</p>
+      </div>
+      <div class="craft-card reveal">
+        <div class="craft-card-num">02</div>
+        <h4>精准烘焙</h4>
+        <p>每款产品独立定制烘焙参数，72小时新鲜烘焙极速送达。</p>
+      </div>
+      <div class="craft-card reveal">
+        <div class="craft-card-num">03</div>
+        <h4>杯测调配</h4>
+        <p>数百次杯测反复打磨，从研磨粗细到萃取温度，追求极致精准。</p>
+      </div>
+    </div>
+    <div class="craft-img reveal">
+      <img src="烘焙图.jpg" alt="烘焙工艺">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<section class="cta reveal">
+  <div class="cta-inner">
+    <p class="cta-overline">Ready for Takeoff?</p>
+    <h2 class="cta-title">准备好起飞了吗</h2>
+    <a href="#products" class="btn-primary">立即选购</a>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="section-pad">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="啡行咖LOGO_transparent.png" alt="CAFIATOR" class="footer-logo">
+        <p>专注为航空爱好者打造精品咖啡</p>
+      </div>
+      <div class="footer-col">
+        <h5>产品</h5>
+        <a href="#products">全部系列</a>
+        <a href="#products">限量珍藏</a>
+        <a href="#products">礼品套装</a>
+      </div>
+      <div class="footer-col">
+        <h5>品牌</h5>
+        <a href="#story">品牌故事</a>
+        <a href="#craft">烘焙工艺</a>
+        <a href="#">联系我们</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 CAFIATOR 啡行咖. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ CART ═══════ -->
+<div class="cart-mask" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartSidebar">
+  <div class="cart-head">
+    <h3>购物袋</h3>
+    <button class="cart-close" id="cartClose">×</button>
+  </div>
+  <div class="cart-body" id="cartItems"><div class="cart-empty">购物袋是空的</div></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>合计</span><span id="totalPrice">¥0</span></div>
+    <button class="cart-checkout" id="checkoutBtn">去结算</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
