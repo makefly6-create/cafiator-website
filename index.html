@@ -24,6 +24,11 @@
         <a href="#story">品牌</a>
         <a href="#points">积分</a>
       </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <!-- 用户登录/注册 -->
       <div class="user-nav">
         <a href="#" class="user-btn" id="loginBtn">登录</a>
@@ -315,6 +320,18 @@
     </div>
   </div>
   <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- 背景音乐 -->
+  <audio id="bgMusic" loop>
+    <source src="../云上暖光.mp3" type="audio/mpeg">
+  </audio>
+  
+  <!-- 音乐控制按钮 -->
+  <div class="music-toggle" id="musicToggle" title="播放背景音乐">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+  </div>
 
   <script src="main.js"></script>
 </body>

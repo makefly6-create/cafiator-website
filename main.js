@@ -499,6 +499,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ============================================
+  // 汉堡菜单
+  // ============================================
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileNav = document.querySelector('.nav-links');
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    // 点击导航链接后关闭菜单
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+      });
+    });
+  }
+
+  // ============================================
+  // 背景音乐控制
+  // ============================================
+  const bgMusic = document.getElementById('bgMusic');
+  const musicToggle = document.getElementById('musicToggle');
+
+  if (bgMusic && musicToggle) {
+    musicToggle.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        musicToggle.classList.add('playing');
+      } else {
+        bgMusic.pause();
+        musicToggle.classList.remove('playing');
+      }
+    });
+  }
+
+  // ============================================
+  // 视差效果 - Hero区域（复用已有heroVisual）
+  // ============================================
+  if (heroVisual) {
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      heroVisual.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+  }
+
   console.log('✈ 啡行咖 CAFIATOR 已加载');
 
   // ============================================
