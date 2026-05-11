@@ -7,7 +7,7 @@
   'use strict';
 
   // ========== 配置 ==========
-  const API_BASE = '/api/v1';
+  const API_BASE = 'http://150.158.150.169:8000/api/v1';
   const TOKEN_KEY = 'cafiator_token';
   const USER_KEY = 'cafiator_user';
   const CART_KEY = 'cafiator_cart';
