@@ -555,6 +555,71 @@
     renderCart();
   }
 
+  function openMessages() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      showToast('请先登录', 'error');
+      showLoginModal();
+      return;
+    }
+    fetchMessages();
+    document.getElementById('messageSidebar')?.classList.add('open');
+    document.getElementById('messageOverlay')?.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMessages() {
+    document.getElementById('messageSidebar')?.classList.remove('open');
+    document.getElementById('messageOverlay')?.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  async function fetchMessages() {
+    const token = localStorage.getItem('token');
+    if (!token) return;
+    try {
+      const res = await fetch(API_BASE + '/messages', {
+        headers: { 'Authorization': 'Bearer ' + token }
+      });
+      const data = await res.json();
+      if (data.code === 0 || data.items) {
+        renderMessages(data.items || [], data.unread_count || 0);
+      }
+    } catch (e) {
+      console.error('获取消息失败', e);
+    }
+  }
+
+  function renderMessages(messages, unreadCount) {
+    const list = document.getElementById('messageList');
+    const countEl = document.getElementById('messageCount');
+    if (countEl) countEl.textContent = unreadCount;
+    if (!list) return;
+    if (messages.length === 0) {
+      list.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">暂无消息</div>';
+      return;
+    }
+    list.innerHTML = messages.map(m => `
+      <div class="message-item ${m.is_read ? '' : 'unread'}" onclick="markMessageRead(${m.id})">
+        <div class="message-title">${m.title}</div>
+        <div class="message-content">${m.content}</div>
+        <div class="message-time">${new Date(m.created_at).toLocaleString('zh-CN')}</div>
+      </div>
+    `).join('');
+  }
+
+  async function markMessageRead(id) {
+    const token = localStorage.getItem('token');
+    if (!token) return;
+    try {
+      await fetch(API_BASE + '/messages/' + id + '/read', {
+        method: 'PUT',
+        headers: { 'Authorization': 'Bearer ' + token }
+      });
+      fetchMessages();
+    } catch (e) {}
+  }
+
   function closeCart() {
     document.getElementById('cartSidebar')?.classList.remove('open');
     document.getElementById('cartOverlay')?.classList.remove('show');
@@ -609,8 +674,11 @@
   // 结算
   document.getElementById('checkoutBtn')?.addEventListener('click', handleCheckout);
   document.getElementById('cartIcon')?.addEventListener('click', openCart);
+  document.getElementById('messageIcon')?.addEventListener('click', openMessages);
   document.getElementById('cartClose')?.addEventListener('click', closeCart);
   document.getElementById('cartOverlay')?.addEventListener('click', closeCart);
+  document.getElementById('messageClose')?.addEventListener('click', closeMessages);
+  document.getElementById('messageOverlay')?.addEventListener('click', closeMessages);
 
   async function handleCheckout() {
     if (cart.length === 0) { showToast('购物车是空的', 'error'); return; }
