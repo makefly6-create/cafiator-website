@@ -1230,7 +1230,7 @@ section {
   .story-features { grid-template-columns: 1fr; }
 
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 32px;
   }
   .footer-bottom {
