@@ -1203,7 +1203,11 @@ section {
     max-width: 280px;
     border-radius: 20px;
   }
-  .hero-image { border-radius: 20px; }
+  .hero-image {
+    border-radius: 20px;
+    height: auto;
+    max-height: 220px;
+  }
   .hero-logo-center {
     width: 64px;
     padding: 5px;
