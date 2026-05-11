@@ -1206,7 +1206,8 @@ section {
   .hero-image {
     border-radius: 20px;
     height: auto;
-    max-height: 165px;
+    max-height: 400px;
+    object-fit: contain;
   }
   .hero-logo-center {
     width: 64px;
